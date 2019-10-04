@@ -1,0 +1,15 @@
+{
+  "name": "stremio-discord",
+  "version": "1.0.0",
+  "description": "Show the movie or series you're watching in Discord",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sleeyax",
+  "dependencies": {
+    "discord-rpc": "^3.1.0",
+    "imdb": "^1.1.0",
+    "stremio-addon-sdk": "^1.4.0"
+  }
+}
