@@ -7,6 +7,6 @@ module.exports = {
     catalogs: [],
     version: '0.0.1',
     logo: 'https://i.imgur.com/HGIkQgD.png',
-    resources: ['subtitles'],
+    resources: ['subtitles', 'meta'],
     types: ['movie', 'series'],
 };
