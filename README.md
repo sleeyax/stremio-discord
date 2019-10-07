@@ -1,6 +1,8 @@
 # stremio-discord
 Show the current Stremio movie or series you're watching in Discord.
 
+This add-on needs the Discord Desktop application installed on your device in order to work.
+
 ## Screenshots
 Series:
 
