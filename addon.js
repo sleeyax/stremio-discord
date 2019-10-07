@@ -17,14 +17,15 @@ function showStartupPresence() {
 showStartupPresence();
 
 addon.defineSubtitlesHandler(async args => {
+
     const id = args.id.split(':')[0];
-    const info = await imdb(id);
+    const info = await imdb(args);
 
     if (info == null) throw 'stremio-discord: no imdb data found for ' + id;
 
     updatePresence({
-        state: `⭐ ${info.rating}/10`,
-        details: `📺 ${info.title} (${info.year})`,
+        state: `⭐ ${info.imdbRating}/10`,
+        details: `📺 ${info.name} (${info.year})`,
         startTimestamp: Date.now(),
         endTimestamp: parseMovieDuration(info.runtime),
         largeImageKey: 'stremio-logo',
