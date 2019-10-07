@@ -9,7 +9,7 @@
   "author": "Sleeyax",
   "dependencies": {
     "discord-rpc": "^3.1.0",
-    "imdb": "^1.1.0",
+    "needle": "^2.2.3",
     "stremio-addon-sdk": "^1.4.0"
   }
 }
