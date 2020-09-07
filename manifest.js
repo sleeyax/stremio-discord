@@ -1,12 +1,12 @@
-const {description} = require('./package');
+const {description, version} = require('./package');
 
 module.exports = {
     id: 'com.sleeyax.stremio-discord',
     name: 'Discord Rich Presence',
     description,
     catalogs: [],
-    version: '0.0.1',
+    version,
     logo: 'https://i.imgur.com/HGIkQgD.png',
-    resources: ['subtitles', 'meta'],
+    resources: ['subtitles', 'stream'],
     types: ['movie', 'series'],
 };

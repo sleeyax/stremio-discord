@@ -8,8 +8,11 @@
   },
   "author": "Sleeyax",
   "dependencies": {
-    "discord-rpc": "^3.1.0",
-    "needle": "^2.2.3",
-    "stremio-addon-sdk": "^1.4.0"
+    "discord-rpc": "^3.1.3",
+    "imdb": "^1.1.0",
+    "stremio-addon-sdk": "^1.6.2"
+  },
+  "devDependencies": {
+    "@types/stremio-addon-sdk": "^1.6.0"
   }
 }

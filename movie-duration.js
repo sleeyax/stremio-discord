@@ -23,7 +23,7 @@ function parseMovieRuntime(runtimeString) {
         }
     }
 
-    return addSeconds(new Date(), time);
+    return {estimatedWatchedDate: addSeconds(new Date(), time), seconds: time};
 }
 
 function addSeconds(date, seconds) {

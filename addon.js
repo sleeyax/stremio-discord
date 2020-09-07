@@ -23,20 +23,32 @@ addon.defineSubtitlesHandler(async args => {
 
     if (info == null) throw 'stremio-discord: no imdb data found for ' + id;
 
+    const movieDuration = parseMovieDuration(info.runtime);
+
     updatePresence({
         state: `⭐ ${info.imdbRating}/10`,
         details: `📺 ${info.name} (${info.year})`,
         startTimestamp: Date.now(),
-        endTimestamp: parseMovieDuration(info.runtime),
+        endTimestamp: movieDuration.estimatedWatchedDate,
         largeImageKey: 'stremio-logo',
     });
+
+    setTimeout(() => showStartupPresence(), movieDuration.seconds * 1000);
 
     return Promise.resolve({subtitles: []});
 });
 
-addon.defineMetaHandler(() => {
-    showStartupPresence();
-    return Promise.resolve({meta: {}});
+addon.defineStreamHandler(async (args) => {
+    const id = args.id.split(':')[0];
+    const info = await imdb(id);
+
+    updatePresence({
+        state: `😎 about to watch ${info.title}`,
+        details: `🍿 picking streams for a ${args.type}`,
+        largeImageKey: 'stremio-logo',
+    });
+
+    return Promise.resolve({streams: {}, cacheMaxAge: 0});
 });
 
 module.exports = addon.getInterface();
