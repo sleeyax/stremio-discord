@@ -39,11 +39,10 @@ addon.defineSubtitlesHandler(async args => {
 });
 
 addon.defineStreamHandler(async (args) => {
-    const id = args.id.split(':')[0];
-    const info = await imdb(id);
+    const info = await imdb(args);
 
     updatePresence({
-        state: `😎 about to watch ${info.title}`,
+        state: `😎 about to watch ${info.name}`,
         details: `🍿 picking streams for a ${args.type}`,
         largeImageKey: 'stremio-logo',
     });
