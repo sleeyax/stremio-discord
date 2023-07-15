@@ -2,7 +2,7 @@
 
 ~~**NO LONGER MAINTAINED I'm currently not interested in maintaining this project anymore, at least untill Stremio 5 has been officially released. This addon was rather an experiment than something that works concistently, due to Stremio 4 [limitations](https://github.com/sleeyax/stremio-discord/issues/2#issuecomment-578397666).**~~
 
-**EDIT: Stremio 5 has been released! Check out the new Discord Integraion guide here: https://gist.github.com/sleeyax/944e27b801fa46086346155cc195bf4e**.
+**EDIT: Stremio 5 has been released! Check out the new Discord Integration guide here: https://gist.github.com/sleeyax/944e27b801fa46086346155cc195bf4e**.
 
 ---
 
